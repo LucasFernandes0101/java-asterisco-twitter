@@ -252,3 +252,4 @@ public class Asterisco extends javax.swing.JFrame {
     private javax.swing.JTextField txt_texto;
     // End of variables declaration//GEN-END:variables
 }
+//editado by mussalam
