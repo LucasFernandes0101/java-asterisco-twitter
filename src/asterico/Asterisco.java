@@ -184,10 +184,10 @@ public class Asterisco extends javax.swing.JFrame {
                 palavraAsterisco += " ";
             }
         }
-        //passa a variavel asterisco para o txt
+        //passa a variavel asterisco para o txt 
         txt_asterisco.setText(palavraAsterisco);
         
-        //adiciona a conversão no histórico
+        //adiciona oque foi convertino ao historico
         Textos t = new Textos();
         t.setTexto(frase);
         t.setAsterisco(palavraAsterisco);
