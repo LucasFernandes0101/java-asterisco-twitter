@@ -178,8 +178,11 @@ public class Asterisco extends javax.swing.JFrame {
             char letra = frase.charAt(i);
             String a = Character.toString(letra);
             
+            //caso contenha caracter ele adiciona um "*" na variavel
             if(!" ".equals(a)){
                 palavraAsterisco += "*";
+                
+            //caso contenha espaçamento ele adiciona um " " na variavel
             }else{
                 palavraAsterisco += " ";
             }
@@ -187,15 +190,17 @@ public class Asterisco extends javax.swing.JFrame {
         //passa a variavel asterisco para o txt 
         txt_asterisco.setText(palavraAsterisco);
         
-        //adiciona oque foi convertino ao historico
+        //cria um objeto do tipo textos
         Textos t = new Textos();
+        //adiciona o texto que o usuario digitou no atributo do objeto
         t.setTexto(frase);
+        //adiciona o texto que o usuario digitou convertido em asteriscos no atributo do objeto
         t.setAsterisco(palavraAsterisco);
         lista.add(t);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //ver o historico 
+        //abre o histórico com as conversões
         Historico h = new Historico(lista);
         h.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
