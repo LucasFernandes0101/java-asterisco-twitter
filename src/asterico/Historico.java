@@ -14,7 +14,7 @@ public class Historico extends javax.swing.JFrame {
     int i = 0;
 
     public Historico(ArrayList<Textos> lista) {
-        initComponents();
+initComponents();
         //define a cor do background para preto
         jPanel1.setBackground(Color.black);
         //for para adicionar os itens na tabela, com o tamanho da lista contendo os textos
@@ -26,6 +26,7 @@ public class Historico extends javax.swing.JFrame {
             });
         }
     }
+
 
     private Historico() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
