@@ -14,21 +14,26 @@ public class Historico extends javax.swing.JFrame {
     int i = 0;
     // Cria o fundo do sistema a jpanel dele e define suas propriedades
     public Historico(ArrayList<Textos> lista) {
-        initComponents();
+initComponents();
+        //define a cor do background para preto
         jPanel1.setBackground(Color.black);
+        //for para adicionar os itens na tabela, com o tamanho da lista contendo os textos
         for (Textos a : lista) {
             i++;
+            //adiciona o indice, o texto digitado pelo usuario, e o texto convertido em asteriscos, em seus respectivos indices na tabela
             AddRowToJTable(new Object[]{
                 i, a.getTexto(), a.getAsterisco()
             });
         }
     }
 
+
     private Historico() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public void AddRowToJTable(Object[] a) {
+        //cria o modelo da tabela e coloca linhas as linhas
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.addRow(a);
     }
