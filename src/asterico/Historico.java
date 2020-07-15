@@ -33,7 +33,7 @@ initComponents();
     }
 
     public void AddRowToJTable(Object[] a) {
-        //cria o modelo da tabela e adiciona as linhas
+        //cria o modelo da tabela e coloca linhas as linhas
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.addRow(a);
     }
