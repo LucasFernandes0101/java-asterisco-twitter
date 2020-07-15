@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 public class Historico extends javax.swing.JFrame {
 
     int i = 0;
-
+    // Cria o fundo do sistema a jpanel dele e define suas propriedades
     public Historico(ArrayList<Textos> lista) {
         initComponents();
         jPanel1.setBackground(Color.black);
@@ -148,8 +148,9 @@ public class Historico extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    // cria botão apagar com suas funcionalidades
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
         try {
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             Asterisco.lista.remove(jTable1.getSelectedRow());
@@ -163,11 +164,13 @@ public class Historico extends javax.swing.JFrame {
                 });
             }
 
+            //Imprime na tela uma mensagem avisando que a pessoa tem q selecionar algo para ser excluido
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Selecione um item para excluir!", "Erro!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+       // cria o botão que exclui o historico todo das palavras que foram trocadas por asteriscos
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setNumRows(0);
